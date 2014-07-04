@@ -1,0 +1,55 @@
+	
+
+	CREATE TABLE Persons
+	(
+		ID int NOT NULL AUTO_INCREMENT,
+		LastName varchar(255) NOT NULL,
+		FirstName varchar(255),
+		Address varchar(255),
+		City varchar(255),
+		PRIMARY KEY (ID)
+	)
+
+CREATE TABLE cliente
+(
+	id_cliente int NOT NULL AUTO_INCREMENT,
+	id_admin int NOT NULL,
+	id_business_type int NOT NULL,
+	name varchar(100) NOT NULL,
+	phone varchar(50) NOT NULL,
+	address varchar(255) NOT NULL,
+	description varchar(255) NOT NULL,
+	image longblob,
+	web_page varchar(100),
+	discount_coupon varchar(1),
+	percentage_discount int,
+	province varchar(50) NOT NULL,
+	district varchar(50),
+	PRIMARY KEY (id_cliente)
+)
+
+CREATE TABLE admin
+(
+	id_admin int NOT NULL AUTO_INCREMENT,
+	user varchar(100) NOT NULL,
+	pass varchar(40) NOT NULL,
+	name varchar(100) NOT NULL,
+	facebook_address varchar(100),
+	email varchar(100),
+	PRIMARY KEY (id_admin)
+)
+
+CREATE TABLE trade
+(
+	id_business_type int NOT NULL AUTO_INCREMENT,
+	name_id_business_type varchar(100) NOT NULL,
+	PRIMARY KEY (id_business_type)
+)
+
+CREATE TABLE coupon
+(
+	id_coupon int NOT NULL AUTO_INCREMENT,
+	id_cliente int NOT NULL,
+	percentage_discount int NOT NULL,
+	PRIMARY KEY (id_coupon)
+)
