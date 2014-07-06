@@ -1,15 +1,4 @@
 	
-
-	CREATE TABLE Persons
-	(
-		ID int NOT NULL AUTO_INCREMENT,
-		LastName varchar(255) NOT NULL,
-		FirstName varchar(255),
-		Address varchar(255),
-		City varchar(255),
-		PRIMARY KEY (ID)
-	)
-
 CREATE TABLE cliente
 (
 	id_cliente int NOT NULL AUTO_INCREMENT,
@@ -19,11 +8,12 @@ CREATE TABLE cliente
 	phone varchar(50) NOT NULL,
 	address varchar(255) NOT NULL,
 	description varchar(255) NOT NULL,
+	state varchar(1) NOT NULL,
 	image longblob,
 	web_page varchar(100),
 	discount_coupon varchar(1),
 	percentage_discount int,
-	province varchar(50) NOT NULL,
+	canton varchar(50) NOT NULL,
 	district varchar(50),
 	PRIMARY KEY (id_cliente)
 )
